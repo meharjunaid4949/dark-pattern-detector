@@ -32,7 +32,7 @@ def load_model():
         def __init__(self, clip_model):
             super().__init__()
             self.clip_model = clip_model
-            self.classifier = torch.nn.Linear(512, 2)
+            self.classifier = torch.nn.Linear(768, 2)
         
         def forward(self, pixel_values):
             features = self.clip_model.get_image_features(pixel_values=pixel_values)
